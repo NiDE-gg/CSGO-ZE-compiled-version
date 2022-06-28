@@ -26,7 +26,7 @@ jobs:
       - name: 'Compile Sourcemod'
         run: |
           cd sourcemod/build
-          python3 ../configure.py --enable-optimize --enable-asan --sdks=csgo,css
+          python3 ../configure.py --enable-optimize --sdks=csgo,css
           CLANG_DEFAULT_CXX_STDLIB=libc++ /home/github/.local/bin/ambuild
           tar cfvz sourcemod-1.11-nide.tar.gz package/
       - name: 'Upload Sourcemod'
